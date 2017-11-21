@@ -10,8 +10,8 @@ int status = WL_IDLE_STATUS;        // the WiFi radio's status
 
 unsigned int localPort = 0000;      // local port to listen on
 
-IPAddress outIp(192, 168, 1, 120);    // remote IP to send to
-unsigned int outPort = 6449;          // remote port to send to
+IPAddress outIp(0, 0, 0, 0);        // remote IP to send to
+unsigned int outPort = 0000;        // remote port to send to
 
 WiFiUDP Udp;
 
