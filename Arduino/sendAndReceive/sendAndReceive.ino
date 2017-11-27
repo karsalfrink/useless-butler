@@ -142,3 +142,10 @@ void setLed(int b) {
   // Set globally defined LED to specified brightness
   analogWrite(led, b);
 }
+
+void setRgbLed(int r, int g, int b) {
+  // For common anode RGB LEDs the input needs to be inverted
+  analogWrite(redPin, 255 - r);
+  analogWrite(greenPin, 255 - g);
+  analogWrite(bluePin, 255 - b);
+}
