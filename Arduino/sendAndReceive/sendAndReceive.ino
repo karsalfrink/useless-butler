@@ -78,7 +78,7 @@ void setup() {
   Serial.println(outPort);
   Serial.println();
 
-  // Set up the LED
+  // Set up the onboard LED
   pinMode(led, OUTPUT);
   analogWrite(led, initialBrightness);
 }
