@@ -118,23 +118,24 @@ void loop() {
 }
 
 void dispatchAddress(OSCMessage &msg) {
-  // Returns true if the data in the first position is a float
-  if (msg.isFloat(0)) {
-    float val = msg.getFloat(0);
-    Serial.print("Message is float: ");
-    Serial.println(val);
-    Serial.println();
+  int vals[] = {};
+  for (int i = 0; i < 3; i++) {
+    // Returns true if the data in the indicated position is a float
+    if (msg.isFloat(i)) {
+      float val = msg.getFloat(i);
 
-    // Multiply float so we can map it to an int
-    // http://electronics.stackexchange.com/a/83462
-    float m = 3200.0f;
-    val = val * m;    
-
-    // Map value to range suitable for analogWrite()
-    // Call function to set LED
-    int mappedVal = map(val, 0, 1 * m, 0, 255);
-    setLed(mappedVal);
+      // Multiply float so we can map it to an int
+      // http://electronics.stackexchange.com/a/83462
+      float m = 3200.0f;
+      val = val * m;    
+  
+      // Map value to range suitable for analogWrite()
+      int mappedVal = map(val, 0, 1 * m, 0, 255);
+      vals[i] = mappedVal;
+    }
   }
+  // Call function to set RGB LED
+  setRgbLed(vals[0], vals[1], vals[2]);
 }
 
 void setLed(int b) {
