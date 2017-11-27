@@ -19,10 +19,6 @@ unsigned int outPort = 6448;        // remote port to send to
 WiFiUDP Udp;
 
 // Set up sensors
-
-// Set up onboard LED
-const int led = 6;                    // the PWM pin the LED is attached to
-const int initialBrightness = 0;      // how bright the LED is (number between 0 and 255)
 const int sensorPins[2] = {A0, A1};
 
 // Set up RGB LED
@@ -77,10 +73,6 @@ void setup() {
   Serial.print(" on port: ");  
   Serial.println(outPort);
   Serial.println();
-
-  // Set up the onboard LED
-  pinMode(led, OUTPUT);
-  analogWrite(led, initialBrightness);
 
   // Set up the RGB LED
   pinMode(redPin, OUTPUT);
@@ -138,11 +130,6 @@ void dispatchAddress(OSCMessage &msg) {
   }
   // Call function to set RGB LED
   setRgbLed(vals[0], vals[1], vals[2]);
-}
-
-void setLed(int b) {
-  // Set globally defined LED to specified brightness
-  analogWrite(led, b);
 }
 
 void setRgbLed(int r, int g, int b) {
