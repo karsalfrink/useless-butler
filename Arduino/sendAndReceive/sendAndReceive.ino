@@ -24,6 +24,10 @@ const int sensorPin = A0; // Sensor 1
 // Set up LED
 int led = 6;                    // the PWM pin the LED is attached to
 int initialBrightness = 0;      // how bright the LED is (number between 0 and 255)
+// Set up RGB LED
+const int redPin = 2;
+const int greenPin = 3;
+const int bluePin = 4;
 
 void setup() {
   // Initialize serial and wait for port to open:
