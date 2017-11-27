@@ -18,8 +18,8 @@ unsigned int outPort = 6448;      // remote port to send to
 
 WiFiUDP Udp;
 
-// Set up pins
-int sensorPin = A0; // Sensor 1
+// Set up sensors
+const int sensorPin = A0; // Sensor 1
 
 // Set up LED
 int led = 6;                    // the PWM pin the LED is attached to
