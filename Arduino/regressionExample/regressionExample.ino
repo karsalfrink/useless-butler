@@ -19,11 +19,11 @@ unsigned int outPort = 6448;        // remote port to send to
 WiFiUDP Udp;
 
 // Set up sensors
-const int sensorPin = A0;
 
 // Set up onboard LED
 const int led = 6;                    // the PWM pin the LED is attached to
 const int initialBrightness = 0;      // how bright the LED is (number between 0 and 255)
+const int sensorPins[2] = {A0, A1};
 
 // Set up RGB LED
 const int redPin = 2;
