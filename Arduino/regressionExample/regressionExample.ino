@@ -5,14 +5,20 @@
 #include <OSCBoards.h>
 
 #include "config.h" // copy config_sample.h and rename it
-#include "wifiHelpers.h" // helper functions for wifi
+
+char ssid[] = MYSSID;               // your network SSID (name)
+char pass[] = MYPASS;               // your network password
+
+int status = WL_IDLE_STATUS;        // the WiFi radio's status
 
 unsigned int localPort = 12000;     // local port to listen on
 
 IPAddress outIp(192, 168, 1, 120);  // remote IP to send to
 unsigned int outPort = 6448;        // remote port to send to
 
-WiFiUDP Udp;
+#include "wifiHelpers.h" // helper functions for wifi
+
+WiFiUDP Udp; // For sending and receiving UDP messages
 
 // Set up sensors
 const int sensorPins[] = {A0, A1};
@@ -26,26 +32,15 @@ void setup() {
   // Set up wifi
   setupWifi();
 
-  // You're connected now, so print out the data:
-  Serial.println();
-  Serial.println("You're connected to the network!");
-  Serial.println();
+  // Print some details
   printCurrentNet();
   printWiFiData();
 
-
   // Start listening for stuff over UDP
   Udp.begin(localPort);
-  Serial.print("Listening on port: ");
-  Serial.println(localPort);
-  Serial.println();
 
-  // Print some stuff about where we're sending to
-  Serial.print("Sending to IP address: ");
-  Serial.print(outIp);
-  Serial.print(" on port: ");  
-  Serial.println(outPort);
-  Serial.println();
+  // Print some more details
+  printPorts();
 
   // Set up the RGB LED
   pinMode(redPin, OUTPUT);

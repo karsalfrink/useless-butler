@@ -1,7 +1,3 @@
-char ssid[] = MYSSID;               // your network SSID (name)
-char pass[] = MYPASS;               // your network password
-int status = WL_IDLE_STATUS;        // the WiFi radio's status
-
 void setupWifi() {
   // Initialize serial and wait for port to open:
   Serial.begin(9600);
@@ -29,7 +25,11 @@ void setupWifi() {
     // Wait 10 seconds for connection:
     delay(10000);
   }
-
+  
+  // You're connected now, so print out the data:
+  Serial.println();
+  Serial.println("You're connected to the network!");
+  Serial.println();
 }
 
 void printWiFiData() {
@@ -86,5 +86,18 @@ void printCurrentNet() {
   byte encryption = WiFi.encryptionType();
   Serial.print("Encryption Type: ");
   Serial.println(encryption, HEX);
+  Serial.println();
+}
+
+void printPorts() {
+  Serial.print("Listening on port: ");
+  Serial.println(localPort);
+  Serial.println();
+
+  // Print some stuff about where we're sending to
+  Serial.print("Sending to IP address: ");
+  Serial.print(outIp);
+  Serial.print(" on port: ");  
+  Serial.println(outPort);
   Serial.println();
 }
