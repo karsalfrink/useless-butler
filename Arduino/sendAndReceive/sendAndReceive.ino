@@ -141,7 +141,4 @@ void dispatchAddress(OSCMessage &msg) {
 void setLed(int b) {
   // Set globally defined LED to specified brightness
   analogWrite(led, b);
-  Serial.print("Set LED brightness to: ");
-  Serial.println(b);
-  Serial.println();
 }
