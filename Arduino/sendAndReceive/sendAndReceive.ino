@@ -93,8 +93,6 @@ void setup() {
 }
 
 void loop() {
-//  Serial.println(analogRead(sensorPin));
-
   // Receive message
   OSCMessage msgIn;
   int size;
