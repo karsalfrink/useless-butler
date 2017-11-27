@@ -7,10 +7,6 @@
 #include "config.h" // copy config_sample.h and rename it
 #include "wifiHelpers.h" // helper functions for wifi
 
-char ssid[] = MYSSID;               // your network SSID (name)
-char pass[] = MYPASS;               // your network password
-int status = WL_IDLE_STATUS;        // the WiFi radio's status
-
 unsigned int localPort = 12000;     // local port to listen on
 
 IPAddress outIp(192, 168, 1, 120);  // remote IP to send to
@@ -27,32 +23,8 @@ const int greenPin = 3;
 const int bluePin = 4;
 
 void setup() {
-  // Initialize serial and wait for port to open:
-  Serial.begin(9600);
-  
-  // What this does: http://arduino.stackexchange.com/a/4557/31607
-  // Remove this if you want your sketch to run without a serial connection
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-  
-  // Check for the presence of the shield:
-  if (WiFi.status() == WL_NO_SHIELD) {
-    Serial.println("WiFi shield not present");
-    // Don't continue:
-    while (true);
-  }
-
-  // Attempt to connect to WiFi network:
-  while (status != WL_CONNECTED) {
-    Serial.print("Attempting to connect to WPA SSID: ");
-    Serial.println(ssid);
-    // Connect to WPA/WPA2 network:
-    status = WiFi.begin(ssid, pass);
-
-    // Wait 10 seconds for connection:
-    delay(10000);
-  }
+  // Set up wifi
+  setupWifi();
 
   // You're connected now, so print out the data:
   Serial.println();
@@ -60,6 +32,7 @@ void setup() {
   Serial.println();
   printCurrentNet();
   printWiFiData();
+
 
   // Start listening for stuff over UDP
   Udp.begin(localPort);
