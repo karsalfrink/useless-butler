@@ -7,14 +7,14 @@
 #include "config.h" // copy config_sample.h and rename it
 #include "wifiHelpers.h" // helper functions for wifi
 
-char ssid[] = MYSSID;            // your network SSID (name)
-char pass[] = MYPASS;  // your network password
-int status = WL_IDLE_STATUS;          // the WiFi radio's status
+char ssid[] = MYSSID;             // your network SSID (name)
+char pass[] = MYPASS;             // your network password
+int status = WL_IDLE_STATUS;      // the WiFi radio's status
 
-unsigned int localPort = 12000;       // local port to listen on
+unsigned int localPort = 12000;   // local port to listen on
 
-IPAddress outIp(172, 20, 10, 2);    // remote IP to send to
-unsigned int outPort = 6448;          // remote port to send to
+IPAddress outIp(172, 20, 10, 2);  // remote IP to send to
+unsigned int outPort = 6448;      // remote port to send to
 
 WiFiUDP Udp;
 
