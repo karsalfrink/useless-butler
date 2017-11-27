@@ -107,7 +107,9 @@ void loop() {
 
   // Send message
   OSCMessage msgOut("/wek/inputs");
-  msgOut.add((float)analogRead(sensorPin));
+  for (int i = 0; i < 2; i++) {
+    msgOut.add((float)analogRead(sensorPins[i]));
+  }
   
   Udp.beginPacket(outIp, outPort);
     msgOut.send(Udp); // send the bytes to the SLIP stream
