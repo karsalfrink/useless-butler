@@ -68,7 +68,8 @@ void loop() {
   // Send message
   OSCMessage msgOut("/wek/inputs");
   for (int i = 0; i < 2; i++) {
-    msgOut.add((float)analogRead(sensorPins[i]));
+    float input = (float)analogRead(sensorPins[i]);
+    msgOut.add(input);
   }
   
   Udp.beginPacket(outIp, outPort);
