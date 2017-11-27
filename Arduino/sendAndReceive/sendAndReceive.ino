@@ -95,8 +95,8 @@ void setup() {
 void loop() {
   // Receive message
   OSCMessage msgIn;
-  int size;
   
+  int size;  
   if( (size = Udp.parsePacket())>0) {
     while(size--)
       msgIn.fill(Udp.read());
