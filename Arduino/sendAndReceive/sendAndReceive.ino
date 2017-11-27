@@ -81,6 +81,15 @@ void setup() {
   // Set up the onboard LED
   pinMode(led, OUTPUT);
   analogWrite(led, initialBrightness);
+
+  // set up the RGB LED
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+  
+  analogWrite(redPin, 0);
+  analogWrite(greenPin, 255);
+  analogWrite(bluePin, 255);
 }
 
 void loop() {
