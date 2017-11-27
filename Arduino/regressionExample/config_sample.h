@@ -1,0 +1,2 @@
+#define MYSSID ""
+#define MYPASS ""
