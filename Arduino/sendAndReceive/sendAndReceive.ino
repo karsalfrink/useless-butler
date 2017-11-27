@@ -82,7 +82,7 @@ void setup() {
   pinMode(led, OUTPUT);
   analogWrite(led, initialBrightness);
 
-  // set up the RGB LED
+  // Set up the RGB LED
   pinMode(redPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
