@@ -85,7 +85,6 @@ void dispatchAddress(OSCMessage &msg) {
   if (msg.isFloat(0)) {
     // Convert output to int and store it
     int val = (int)msg.getFloat(0);
-    Serial.println(val);
     // Handle each case, we are assuming 4 in total
     switch (val) {
       case 1:
