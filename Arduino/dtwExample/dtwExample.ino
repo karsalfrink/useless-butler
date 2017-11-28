@@ -62,7 +62,10 @@ void loop() {
       msgIn.fill(Udp.read());
 
     if (!msgIn.hasError())
-      msgIn.dispatch("/wek/outputs", dispatchAddress);
+      // Route allows for partial matches
+      // Gesture outputs need to be named "/output/1"
+      // Underscores (e.g. "/output_1") won't work!
+      msgIn.route("/output", routeAddress);
   }
 
   // Send message
