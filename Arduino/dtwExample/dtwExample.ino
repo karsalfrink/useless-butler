@@ -83,10 +83,14 @@ void loop() {
   delay(20);
 }
 
-void routeAddress(OSCMessage &msg, int addressOffset) {
-  char addr[2]; // string to hold address after the offset
-  msg.getAddress(addr, addressOffset); // get the address after the offset and store
-  Serial.println(addr[1]); // print address
+void routeAddress(OSCMessage &msg, int addrOffset) {
+  char addrArray[2]; // character array to hold address after offset
+  msg.getAddress(addrArray, addrOffset); // get the address after offset and store
+  String addr(addrArray); // convert character array to string
+
+  if (addr == "/1") setRgbLed(255, 0, 0); // set RGB LED to red
+  if (addr == "/2") setRgbLed(0, 255, 0); // set RGB LED to green
+  if (addr == "/3") setRgbLed(0, 0, 0); // turn RGB LED off
 }
 
 void setRgbLed(int r, int g, int b) {
