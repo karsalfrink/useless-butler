@@ -82,7 +82,7 @@ void loop() {
 
 void dispatchAddress(OSCMessage &msg) {
   // Even though we are classifying, wekinator sends outputs as floats
-  if (msg.isFloat(0)) {
+  if (msg.isFloat(0)) {    
     // Convert output to int and store it
     int val = (int)msg.getFloat(0);
     // Handle each case, we are assuming 4 in total
