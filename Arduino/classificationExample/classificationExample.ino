@@ -81,24 +81,29 @@ void loop() {
 }
 
 void dispatchAddress(OSCMessage &msg) {
-  int vals[] = {};
-  for (int i = 0; i < 3; i++) {
-    // Returns true if the data in the indicated position is a float
-    if (msg.isFloat(i)) {
-      float val = msg.getFloat(i);
-
-      // Multiply float so we can map it to an int
-      // http://electronics.stackexchange.com/a/83462
-      float m = 3200.0f;
-      val = val * m;    
-  
-      // Map value to range suitable for analogWrite()
-      int mappedVal = map(val, 0, 1 * m, 0, 255);
-      vals[i] = mappedVal;
+  // Even though we are classifying, wekinator sends outputs as floats
+  if (msg.isFloat(0)) {
+    // Convert output to int and store it
+    int val = (int)msg.getFloat(0);
+    Serial.println(val);
+    // Handle each case, we are assuming 4 in total
+    switch (val) {
+      case 1:
+        setRgbLed(255, 255, 0); // set rgb led to yellow
+        break;
+      case 2:
+        setRgbLed(0, 255, 255); // set rgb led to cyan
+        break;
+      case 3:
+        setRgbLed(255, 0, 255); // set rgb led to magenta
+        break;
+      case 4:
+        setRgbLed(255, 255, 255); // set rgb to white
+        break;
+      default:
+        setRgbLed(0, 0, 0); // set rgb led off
     }
   }
-  // Call function to set RGB LED
-  setRgbLed(vals[0], vals[1], vals[2]);
 }
 
 void setRgbLed(int r, int g, int b) {
