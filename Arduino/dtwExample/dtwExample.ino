@@ -83,29 +83,10 @@ void loop() {
   delay(20);
 }
 
-void dispatchAddress(OSCMessage &msg) {
-  // Even though we are classifying, wekinator sends outputs as floats
-  if (msg.isFloat(0)) {
-    // Convert output to int and store it
-    int val = (int)msg.getFloat(0);
-    // Handle each case, we are assuming 4 in total
-    switch (val) {
-      case 1:
-        setRgbLed(255, 255, 0); // set rgb led to yellow
-        break;
-      case 2:
-        setRgbLed(0, 255, 255); // set rgb led to cyan
-        break;
-      case 3:
-        setRgbLed(255, 0, 255); // set rgb led to magenta
-        break;
-      case 4:
-        setRgbLed(255, 255, 255); // set rgb to white
-        break;
-      default:
-        setRgbLed(0, 0, 0); // set rgb led off
-    }
-  }
+void routeAddress(OSCMessage &msg, int addressOffset) {
+  char addr[2]; // string to hold address after the offset
+  msg.getAddress(addr, addressOffset); // get the address after the offset and store
+  Serial.println(addr[1]); // print address
 }
 
 void setRgbLed(int r, int g, int b) {
