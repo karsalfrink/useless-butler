@@ -28,6 +28,9 @@ const int redPin = 2;
 const int greenPin = 3;
 const int bluePin = 4;
 
+// Set up onboard LED
+const int onboardLed = 6;
+
 void setup() {
   // Set up wifi
   setupWifi();
@@ -50,6 +53,10 @@ void setup() {
   analogWrite(redPin, 255);
   analogWrite(greenPin, 255);
   analogWrite(bluePin, 255);
+
+  // Turn on onboard LED to indicate setup has completed
+  pinMode(onboardLed, OUTPUT);
+  digitalWrite(onboardLed, HIGH);
 }
 
 void loop() {
