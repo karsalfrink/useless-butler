@@ -49,7 +49,7 @@ void setup() {
   pinMode(redPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
-  
+
   analogWrite(redPin, 255);
   analogWrite(greenPin, 255);
   analogWrite(bluePin, 255);
@@ -62,13 +62,13 @@ void setup() {
 void loop() {
   // Receive message
   OSCMessage msgIn;
-  
-  int size;  
-  if( (size = Udp.parsePacket())>0) {
-    while(size--)
+
+  int size;
+  if ( (size = Udp.parsePacket()) > 0) {
+    while (size--)
       msgIn.fill(Udp.read());
-    
-    if(!msgIn.hasError())
+
+    if (!msgIn.hasError())
       msgIn.dispatch("/wek/outputs", dispatchAddress);
   }
 
@@ -78,9 +78,9 @@ void loop() {
     float input = (float)analogRead(sensorPins[i]);
     msgOut.add(input);
   }
-  
+
   Udp.beginPacket(outIp, outPort);
-    msgOut.send(Udp); // send the bytes to the SLIP stream
+  msgOut.send(Udp); // send the bytes to the SLIP stream
   Udp.endPacket(); // mark the end of the OSC Packet
   msgOut.empty(); // free space occupied by message
 
@@ -97,8 +97,8 @@ void dispatchAddress(OSCMessage &msg) {
       // Multiply float so we can map it to an int
       // http://electronics.stackexchange.com/a/83462
       float m = 3200.0f;
-      val = val * m;    
-  
+      val = val * m;
+
       // Map value to range suitable for analogWrite()
       int mappedVal = map(val, 0, 1 * m, 0, 255);
       vals[i] = mappedVal;
