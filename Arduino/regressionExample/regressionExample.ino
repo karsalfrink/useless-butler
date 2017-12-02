@@ -13,7 +13,7 @@ int status = WL_IDLE_STATUS;        // the WiFi radio's status
 
 unsigned int localPort = 12000;     // local port to listen on
 
-IPAddress outIp(192, 168, 1, 120);  // remote IP to send to
+IPAddress outIp(999, 999, 999, 999);  // remote IP to send to
 unsigned int outPort = 6448;        // remote port to send to
 
 #include "wifiHelpers.h" // helper functions for wifi
