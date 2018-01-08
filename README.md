@@ -14,3 +14,7 @@ This example code is part of a workshop developed by [Péter Kun](http://peterku
 ## How-To
 
 Refer to slides for instructions on how to use.
+
+## Reports
+
+* [Write-up of the workshop at ThingsCon Amsterdam 2017](http://leapfrog.nl/blog/archives/2018/01/02/prototyping-the-useless-butler-machine-learning-for-iot-designers/)
