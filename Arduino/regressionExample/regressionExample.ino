@@ -4,19 +4,20 @@
 #include <OSCBundle.h>
 #include <OSCBoards.h>
 
-#include "config.h" // copy config_sample.h and rename it
+#include "config.h" // Copy config_sample.h and rename it
 
-char ssid[] = MYSSID;               // your network SSID (name)
-char pass[] = MYPASS;               // your network password
+char ssid[] = MYSSID;                 // Your network SSID (name)
+char pass[] = MYPASS;                 // Your network password
 
-int status = WL_IDLE_STATUS;        // the WiFi radio's status
+int status = WL_IDLE_STATUS;          // The WiFi radio's status
 
-unsigned int localPort = 12000;     // local port to listen on
+unsigned int localPort = 12000;       // Local port to listen on
 
-IPAddress outIp(999, 999, 999, 999);  // remote IP to send to
-unsigned int outPort = 6448;        // remote port to send to
+// Values below should be those of the machine running Wekinator
+IPAddress outIp(999, 999, 999, 999);  // Remote IP to send to
+unsigned int outPort = 6448;          // Remote port to send to
 
-#include "wifiHelpers.h" // helper functions for wifi
+#include "wifiHelpers.h" // Helper functions for wifi
 
 WiFiUDP Udp; // For sending and receiving UDP messages
 
@@ -80,9 +81,9 @@ void loop() {
   }
 
   Udp.beginPacket(outIp, outPort);
-  msgOut.send(Udp); // send the bytes to the SLIP stream
-  Udp.endPacket(); // mark the end of the OSC Packet
-  msgOut.empty(); // free space occupied by message
+  msgOut.send(Udp); // Send the bytes to the SLIP stream
+  Udp.endPacket();  // Mark the end of the OSC Packet
+  msgOut.empty();   // Free space occupied by message
 
   delay(20);
 }
@@ -92,7 +93,7 @@ void dispatchAddress(OSCMessage &msg) {
   for (int i = 0; i < 3; i++) {
     // Returns true if the data in the indicated position is a float
     if (msg.isFloat(i)) {
-      float val = msg.getFloat(i);
+      float val = msg.getFloat(i); // Get the float
 
       // Multiply float so we can map it to an int
       // http://electronics.stackexchange.com/a/83462
