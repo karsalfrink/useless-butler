@@ -43,6 +43,41 @@ For all examples, go through the steps below to get communication between the MK
 Read on below for the specifics of each example.
 
 ### 1. Regression
+
+> Real-valued ("continuous") numeric outputs can take on any number value (possibly limited to a certain range). For example, you might want to control "audio gain" with a real-valued output limited between 0 and 1. This is the default output type in Wekinator. ([source](http://www.wekinator.org/detailed-instructions/#The_three_output_types))
+
+Think of this as a smart slider.
+
+#### Wekinator setup
+
+Create a new project in Wekinator with the settings below.
+
+![Regression settings](Screenshots/wekinator-regression-settings.png?raw=true)
+
+* Two inputs (one for each photoresistor)
+* Three outputs (one each for red, green and blue)
+* All continuous (default)
+* Don't forget to set your MKR1000's IP under 'host'
+* Leave ports as they are
+
+Hit 'next' to start training
+
+#### Wekinator training and running
+
+(Instructions below adapted from the [walkthrough](http://www.wekinator.org/walkthrough/) on the Wekinator website.)
+
+1. Use the sliders, text boxes, and/or the 'Randomize' button to send new control values to your output (the MKR1000's RGB LED). You should see changes in your output as you do this. (If you don't see this change, make sure you don't have any other outputs open; if you did, you may have to restart your output again.)
+2. Once you have a color you like, start demonstrating which input values you want to use to achieve this color. That is to say, change the intensity of light falling on one or both of the photoresistors. For example, you can cover them with your hands or shine on them with your phone's flashlight.
+3. Hit 'Start Recording,' wait about 1/2 second, then hit 'Stop Recording.' You should see that the number of examples recorded for each output is now something greater than 0. (If it's still 0, make sure your input is still running, and that you don't have multiple inputs or Wekinator projects open at once.)
+4. Repeat steps 1-3 at least one more time: Find a color you like, adjust your inputs to tell Wekinator how you want to get to that color, and then briefly record some examples.
+5. Hit 'Train' to build a model from all the training examples you just recorded.
+6. Hit 'Run.' Wekinator will now use the model you've just built to compute new output values for every new input value it sees. As you change your inputs (change the photoresistor lighting conditions), you should see the outputs change.
+7. You've got it! If you like it, you can save your project and re-load it later to use with the same input and output. Or, you can keep refining your models:
+
+* You can keep adding training examples by repeating steps 1-3 above, then re-training. This will add those examples to all the examples you've recorded previously.
+* If you don't like what's happened when you've added examples, you can hit 'Delete last recording' to remove them from your training set. You'll have to re-train in order for this to have an effect.
+* If you want to start over, you can delete all examples for a single output by clicking the 'X' button in that output's row. Or you can delete absolutely everything by clicking the 'X' on top of your project window.
+
 ### 2. Classification
 ### 3. Dynamic Time Warping (DTW)
 
