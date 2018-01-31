@@ -15,12 +15,12 @@ This example code is part of a workshop developed by [Péter Kun](http://peterku
 
 ### Building the circuit
 
-Assuming an Arduino MKR1000, build the circuit as included in the `/Fritzing` directory.
-
-![Circuit](Fritzing/circuit.png?raw=true)
+Using an Arduino MKR1000, build the circuit as included in the `/Fritzing` directory.
 
 * One RGB LED on digital PWM pins 2, 3, 4
 * Two photoresistors on analog pins A0 and A1
+
+![Circuit](Fritzing/circuit.png?raw=true)
 
 **Note:** The circuit diagram shows a common anode RGB LED. If using a common cathode RGB LED, connect the long pin to ground instead of 5V.
 
