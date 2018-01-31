@@ -42,9 +42,9 @@ For all examples, go through the steps below to get communication between the MK
 
 Read on below for the specifics of each example.
 
-### Regression
-### Classification
-### Dynamic Time Warping (DTW)
+### 1. Regression
+### 2. Classification
+### 3. Dynamic Time Warping (DTW)
 
 ## Reports
 
