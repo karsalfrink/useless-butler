@@ -17,7 +17,7 @@ This example code is part of a workshop developed by [Péter Kun](http://peterku
 
 Assuming an Arduino MKR1000, build the circuit as included in the `/Fritzing` directory.
 
-[Circuit](Fritzing/circuit.png?raw=true)
+![Circuit](Fritzing/circuit.png?raw=true)
 
 * One RGB LED on digital PWM pins 2, 3, 4
 * Two photoresistors on analog pins A0 and A1
