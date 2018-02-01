@@ -83,4 +83,4 @@ Hit 'next' to start training
 
 ## Reports
 
-* [Write-up of the workshop at ThingsCon Amsterdam 2017](http://leapfrog.nl/blog/archives/2018/01/02/prototyping-the-useless-butler-machine-learning-for-iot-designers/)
+* [Write-up of the workshop at ThingsCon Amsterdam 2017](https://leapfrog.nl/blog/archives/2018/01/02/prototyping-the-useless-butler-machine-learning-for-iot-designers/)
