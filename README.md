@@ -107,6 +107,21 @@ Hit ‘next’ to start training.
 
 Think of this as a smart button.
 
+#### Wekinator setup
+
+Create a new project in Wekinator with the settings below.
+
+![DTW settings](Screenshots/wekinator-dtw-settings.png?raw=true)
+
+* Two inputs
+* One output
+* All DTW
+* Three gesture types
+* Don’t forget to set your MKR1000’s IP under ‘host’
+* Leave ports as they are
+
+Hit ‘next’ to start training.
+
 ## Reports
 
 * [Write-up of the first attempt at TU Delft IDE Academy](https://leapfrog.nl/blog/archives/2017/03/10/machine-learning-for-designers-workshop/)
