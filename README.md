@@ -126,6 +126,10 @@ Hit ‘next’ to start training.
 
 #### Wekinator training and running
 
+**Note:** Before you can start training you need to rename your output OSC messages to "output/1", "output/2" and "output/3". (The reason for this is related to how the Arduino OSC library processes messages.) To do this, hit the 'edit' button at the bottom of the main Dynamic Time Warping screen, then hit the 'edit' button for the output group name. Adjust the gesture OSC messages, then hit 'OK' to close the 'names and OSC messages' window. Hit 'apply changes' to close the 'editing output' window. We are now ready to train.
+
+![Editing DTW OSC messages](Screenshots/wekinator-dtw-edit-osc-messages.png?raw=true)
+
 ## Reports
 
 * [Write-up of the first attempt at TU Delft IDE Academy](https://leapfrog.nl/blog/archives/2017/03/10/machine-learning-for-designers-workshop/)
