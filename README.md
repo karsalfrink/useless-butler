@@ -78,6 +78,8 @@ Hit 'Next' to start training.
 * If you don't like what's happened when you've added examples, you can hit 'Delete last recording' to remove them from your training set. You'll have to re-train in order for this to have an effect.
 * If you want to start over, you can delete all examples for a single output by clicking the 'X' button in that output's row. Or you can delete absolutely everything by clicking the 'X' on top of your project window.
 
+![Regression training](Screenshots/wekinator-regression-training.png?raw=true)
+
 ### 2. Classification
 
 > These are discrete categories, such as "Position 1", "Position 2," "Position 3." You’ll need to tell Wekinator how many categories to use. Wekinator will send outputs as numbers, such as "1," "2," "3" for categories 1, 2, and 3. Wekinator will attempt to categorize every new input you send it. ([source](http://www.wekinator.org/detailed-instructions/#The_three_output_types))
