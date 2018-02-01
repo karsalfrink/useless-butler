@@ -84,6 +84,21 @@ Hit 'next' to start training.
 
 Think of this as a smart switch.
 
+#### Wekinator setup
+
+Create a new project in Wekinator with the settings below.
+
+![Classification settings](Screenshots/wekinator-classification-settings.png?raw=true)
+
+* Two inputs
+* One output
+* All classifiers
+* Four classes
+* Don’t forget to set your MKR1000’s IP under ‘host’
+* Leave ports as they are
+
+Hit ‘next’ to start training.
+
 ### 3. Dynamic Time Warping (DTW)
 
 ## Reports
