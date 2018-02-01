@@ -48,7 +48,7 @@ Read on below for the specifics of each example.
 
 Think of this as a smart slider.
 
-#### Wekinator setup
+#### Setup
 
 Create a new project in Wekinator with the settings below.
 
@@ -62,7 +62,7 @@ Create a new project in Wekinator with the settings below.
 
 Hit 'next' to start training.
 
-#### Wekinator training and running
+#### Training and running
 
 (Instructions below adapted from the [walkthrough](http://www.wekinator.org/walkthrough/) on the Wekinator website.)
 
@@ -84,7 +84,7 @@ Hit 'next' to start training.
 
 Think of this as a smart switch.
 
-#### Wekinator setup
+#### Setup
 
 Create a new project in Wekinator with the settings below.
 
@@ -99,7 +99,7 @@ Create a new project in Wekinator with the settings below.
 
 Hit ‘next’ to start training.
 
-#### Wekinator training and running
+#### Training and running
 
 Training is identical to regression as described above. The only difference is that the outputs are one of the four classes for the single output. These can be selected with the drop down box. Recording one example for each class should suffice.
 
@@ -109,7 +109,7 @@ Training is identical to regression as described above. The only difference is t
 
 Think of this as a smart button.
 
-#### Wekinator setup
+#### Setup
 
 Create a new project in Wekinator with the settings below.
 
@@ -124,11 +124,13 @@ Create a new project in Wekinator with the settings below.
 
 Hit ‘next’ to start training.
 
-#### Wekinator training and running
+### Editing OSC messages
 
 **Note:** Before you can start training you need to rename your output OSC messages to "output/1", "output/2" and "output/3". (The reason for this is related to how the Arduino OSC library processes messages.) To do this, hit the 'edit' button at the bottom of the main Dynamic Time Warping screen, then hit the 'edit' button for the output group name. Adjust the gesture OSC messages, then hit 'OK' to close the 'names and OSC messages' window. Hit 'apply changes' to close the 'editing output' window. We are now ready to train.
 
 ![Editing DTW OSC messages](Screenshots/wekinator-dtw-edit-osc-messages.png?raw=true)
+
+#### Training and running
 
 ## Reports
 
