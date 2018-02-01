@@ -103,6 +103,10 @@ Hit ‘next’ to start training.
 
 ### 3. Dynamic Time Warping (DTW)
 
+> Use this output type when you want Wekinator to recognize patterns over time. For instance, you might want to play one note every time you draw a circle in the air with your hand, and another note every time you draw a square. If you’re not drawing either one, or if you’re in the middle of drawing, you don’t want anything to happen. That is, you want Wekinator to look for a particular pattern (or multiple patterns) of how the inputs are changing over time, and tell you when a pattern is spotted and which one it was. ([source](http://www.wekinator.org/detailed-instructions/#The_three_output_types))
+
+Think of this as a smart button.
+
 ## Reports
 
 * [Write-up of the first attempt at TU Delft IDE Academy](https://leapfrog.nl/blog/archives/2017/03/10/machine-learning-for-designers-workshop/)
