@@ -80,7 +80,7 @@ Hit 'next' to start training.
 
 ### 2. Classification
 
-> These are discrete categories, such as “Position 1”, “Position 2,” “Position 3.” You’ll need to tell Wekinator how many categories to use. Wekinator will send outputs as numbers, such as “1,” “2,” “3” for categories 1, 2, and 3. Wekinator will attempt to categorize every new input you send it. ([source](http://www.wekinator.org/detailed-instructions/#The_three_output_types))
+> These are discrete categories, such as "Position 1", "Position 2," "Position 3." You’ll need to tell Wekinator how many categories to use. Wekinator will send outputs as numbers, such as "1," "2," "3" for categories 1, 2, and 3. Wekinator will attempt to categorize every new input you send it. ([source](http://www.wekinator.org/detailed-instructions/#The_three_output_types))
 
 Think of this as a smart switch.
 
@@ -97,7 +97,7 @@ Create a new project in Wekinator with the settings below.
 * Don't forget to set your MKR1000's IP under 'host'
 * Leave ports as they are
 
-Hit ‘next’ to start training.
+Hit 'next' to start training.
 
 #### Training and running
 
@@ -122,7 +122,7 @@ Create a new project in Wekinator with the settings below.
 * Don't forget to set your MKR1000's IP under 'host'
 * Leave ports as they are
 
-Hit ‘next’ to start training.
+Hit 'next' to start training.
 
 ### Editing OSC messages
 
