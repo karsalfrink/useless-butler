@@ -14,7 +14,7 @@ int status = WL_IDLE_STATUS;          // The WiFi radio's status
 unsigned int localPort = 12000;       // Local port to listen on
 
 // Values below should be those of the machine running Wekinator
-IPAddress outIp(999,999,999,999);     // Remote IP to send to
+IPAddress outIp(999, 999, 999, 999);  // Remote IP to send to
 unsigned int outPort = 6448;          // Remote port to send to
 
 #include "wifiHelpers.h" // Helper functions for wifi
