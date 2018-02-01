@@ -57,10 +57,10 @@ Create a new project in Wekinator with the settings below.
 * Two inputs (one for each photoresistor)
 * Three outputs (one each for red, green and blue)
 * All continuous (default)
-* Don't forget to set your MKR1000's IP under 'host'
+* Don't forget to set your MKR1000's IP address under 'Host'
 * Leave ports as they are
 
-Hit 'next' to start training.
+Hit 'Next' to start training.
 
 #### Training and running
 
@@ -94,10 +94,10 @@ Create a new project in Wekinator with the settings below.
 * One output (for the RGB LED)
 * All classifiers
 * Four classes (one each for a specific RGB LED state controlled by the Arduino sketch—cyan, magenta, yellow and white)
-* Don't forget to set your MKR1000's IP under 'host'
+* Don't forget to set your MKR1000's IP address under 'Host'
 * Leave ports as they are
 
-Hit 'next' to start training.
+Hit 'Next' to start training.
 
 #### Training and running
 
@@ -119,14 +119,14 @@ Create a new project in Wekinator with the settings below.
 * One output (for the RGB LED)
 * All DTW
 * Three gesture types (one each for a specific RGB LED state controlled by the Arduino sketch—red, green or off)
-* Don't forget to set your MKR1000's IP under 'host'
+* Don't forget to set your MKR1000's IP address under 'Host'
 * Leave ports as they are
 
-Hit 'next' to start training.
+Hit 'Next' to start training.
 
 ### Editing OSC messages
 
-**Note:** Before you can start training you need to rename your output OSC messages to "output/1", "output/2" and "output/3". (The reason for this is related to how the Arduino OSC library processes messages.) To do this, hit the 'edit' button at the bottom of the main Dynamic Time Warping screen, then hit the 'edit' button for the output group name. Adjust the gesture OSC messages, then hit 'OK' to close the 'names and OSC messages' window. Hit 'apply changes' to close the 'editing output' window. We are now ready to train.
+**Note:** Before you can start training you need to rename your output OSC messages to "output/1", "output/2" and "output/3". (The reason for this is related to how the Arduino OSC library processes messages.) To do this, hit the 'Edit' button at the bottom of the main Dynamic Time Warping screen, then hit the 'Edit' button for the output group name. Adjust the gesture OSC messages, then hit 'OK' to close the 'Names and OSC Messages' window. Hit 'Apply Changes' to close the 'Editing Output' window. We are now ready to train.
 
 ![Editing DTW OSC messages](Screenshots/wekinator-dtw-edit-osc-messages.png?raw=true)
 
