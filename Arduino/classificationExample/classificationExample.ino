@@ -4,19 +4,20 @@
 #include <OSCBundle.h>
 #include <OSCBoards.h>
 
-#include "config.h" // copy config_sample.h and rename it
+#include "config.h" // Copy config_sample.h and rename it
 
-char ssid[] = MYSSID;               // your network SSID (name)
-char pass[] = MYPASS;               // your network password
+char ssid[] = MYSSID;                 // Your network SSID (name)
+char pass[] = MYPASS;                 // Your network password
 
-int status = WL_IDLE_STATUS;        // the WiFi radio's status
+int status = WL_IDLE_STATUS;          // The WiFi radio's status
 
-unsigned int localPort = 12000;     // local port to listen on
+unsigned int localPort = 12000;       // Local port to listen on
 
-IPAddress outIp(999, 999, 999, 999);  // remote IP to send to
-unsigned int outPort = 6448;        // remote port to send to
+// Values below should be those of the machine running Wekinator
+IPAddress outIp(999, 999, 999, 999);  // Remote IP to send to
+unsigned int outPort = 6448;          // Remote port to send to
 
-#include "wifiHelpers.h" // helper functions for wifi
+#include "wifiHelpers.h" // Helper functions for wifi
 
 WiFiUDP Udp; // For sending and receiving UDP messages
 
@@ -80,9 +81,9 @@ void loop() {
   }
 
   Udp.beginPacket(outIp, outPort);
-  msgOut.send(Udp); // send the bytes to the SLIP stream
-  Udp.endPacket(); // mark the end of the OSC Packet
-  msgOut.empty(); // free space occupied by message
+  msgOut.send(Udp); // Send the bytes to the SLIP stream
+  Udp.endPacket();  // Mark the end of the OSC Packet
+  msgOut.empty();   // Free space occupied by message
 
   delay(20);
 }
@@ -95,19 +96,19 @@ void dispatchAddress(OSCMessage &msg) {
     // Handle each case, we are assuming 4 in total
     switch (val) {
       case 1:
-        setRgbLed(255, 255, 0); // set rgb led to yellow
+        setRgbLed(255, 255, 0);   // Set rgb led to yellow
         break;
       case 2:
-        setRgbLed(0, 255, 255); // set rgb led to cyan
+        setRgbLed(0, 255, 255);   // Set rgb led to cyan
         break;
       case 3:
-        setRgbLed(255, 0, 255); // set rgb led to magenta
+        setRgbLed(255, 0, 255);   // Set rgb led to magenta
         break;
       case 4:
-        setRgbLed(255, 255, 255); // set rgb to white
+        setRgbLed(255, 255, 255); // Set rgb to white
         break;
       default:
-        setRgbLed(0, 0, 0); // set rgb led off
+        setRgbLed(0, 0, 0);       // Set rgb led off
     }
   }
 }

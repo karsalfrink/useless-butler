@@ -4,19 +4,20 @@
 #include <OSCBundle.h>
 #include <OSCBoards.h>
 
-#include "config.h" // copy config_sample.h and rename it
+#include "config.h" // Copy config_sample.h and rename it
 
-char ssid[] = MYSSID;               // your network SSID (name)
-char pass[] = MYPASS;               // your network password
+char ssid[] = MYSSID;                 // Your network SSID (name)
+char pass[] = MYPASS;                 // Your network password
 
-int status = WL_IDLE_STATUS;        // the WiFi radio's status
+int status = WL_IDLE_STATUS;          // The WiFi radio's status
 
-unsigned int localPort = 12000;     // local port to listen on
+unsigned int localPort = 12000;       // Local port to listen on
 
-IPAddress outIp(999, 999, 999, 999);  // remote IP to send to
-unsigned int outPort = 6448;        // remote port to send to
+// Values below should be those of the machine running Wekinator
+IPAddress outIp(999, 999, 999, 999);  // Remote IP to send to
+unsigned int outPort = 6448;          // Remote port to send to
 
-#include "wifiHelpers.h" // helper functions for wifi
+#include "wifiHelpers.h" // Helper functions for wifi
 
 WiFiUDP Udp; // For sending and receiving UDP messages
 
@@ -83,21 +84,21 @@ void loop() {
   }
 
   Udp.beginPacket(outIp, outPort);
-  msgOut.send(Udp); // send the bytes to the SLIP stream
-  Udp.endPacket(); // mark the end of the OSC Packet
-  msgOut.empty(); // free space occupied by message
+  msgOut.send(Udp); // Send the bytes to the SLIP stream
+  Udp.endPacket();  // Mark the end of the OSC Packet
+  msgOut.empty();   // Free space occupied by message
 
   delay(20);
 }
 
 void routeAddress(OSCMessage &msg, int addrOffset) {
-  char addrArray[2]; // character array to hold address after offset
-  msg.getAddress(addrArray, addrOffset); // get the address after offset and store
-  String addr(addrArray); // convert character array to string
+  char addrArray[2]; // Character array to hold address after offset
+  msg.getAddress(addrArray, addrOffset); // Get the address after offset and store
+  String addr(addrArray); // Convert character array to string
 
-  if (addr == "/1") setRgbLed(255, 0, 0); // set RGB LED to red
-  if (addr == "/2") setRgbLed(0, 255, 0); // set RGB LED to green
-  if (addr == "/3") setRgbLed(0, 0, 0); // turn RGB LED off
+  if (addr == "/1") setRgbLed(255, 0, 0); // Set RGB LED to red
+  if (addr == "/2") setRgbLed(0, 255, 0); // Set RGB LED to green
+  if (addr == "/3") setRgbLed(0, 0, 0);   // Turn RGB LED off
 }
 
 void setRgbLed(int r, int g, int b) {
