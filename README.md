@@ -132,6 +132,22 @@ Hit ‘next’ to start training.
 
 #### Training and running
 
+(Instructions below adapted from the section on [dynamic time warping](http://www.wekinator.org/detailed-instructions/#The_basics) on the Wekinator website.)
+
+To use dynamic time warping, you’ll follow a slightly different process from the one described in the instructions above.
+
+A training "example" in dynamic time warping captures how your inputs have changed over a period of time. 
+
+In this case, you are going to try and recognise a particular pattern of change in light intensity over time as read by the two photoresistors. The Arduino sketch sends a continuous stream of numbers representing the readings from both photoresistors to Wekinator. An example would be a list of values that describe the light intensity from the time you start your gesture until you finish it.
+
+To record an example for DTW, hold down the '+' button as soon as you start making the gesture and release it only when you finish making the gesture. If you made a mistake, you can always delete the last example recorded by hitting the '-' button.
+
+DTW only needs one training example of any gesture class to be recorded before it can run. There is no separate training stage.
+
+Once you start running, you’ll see a blue bar showing you the degree of similarity between the current gesture you are making and the closest example you've recorded for each gesture type. The further to the right this bar, the closer the match. When the similarity of the closest match is above your set threshold, the light for that gesture will turn green, and the OSC message corresponding to that gesture type will be sent out. You can tune the match threshold interactively using the slider at the bottom of the screen.
+
+The range of this slider is different from the range of each of the blue bars, so it may be that your closest match is above the numeric threshold even though your slider is to the right of the degree of match. This is fine! Just experiment with the slider until it seems like the green light goes off when you make the gesture and doesn't go off when you don't make the gesture.
+
 ## Reports
 
 * [Write-up of the first attempt at TU Delft IDE Academy](https://leapfrog.nl/blog/archives/2017/03/10/machine-learning-for-designers-workshop/)
