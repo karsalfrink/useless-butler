@@ -83,4 +83,5 @@ Hit 'next' to start training
 
 ## Reports
 
+* [Write-up of the first attempt at TU Delft IDE Academy](https://leapfrog.nl/blog/archives/2017/03/10/machine-learning-for-designers-workshop/)
 * [Write-up of the workshop at ThingsCon Amsterdam 2017](https://leapfrog.nl/blog/archives/2018/01/02/prototyping-the-useless-butler-machine-learning-for-iot-designers/)
