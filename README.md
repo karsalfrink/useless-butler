@@ -1,6 +1,6 @@
 # Prototyping the Useless Butler: Machine Learning for IoT Designers
 
-This example code is part of a workshop developed by [Péter Kun](http://peterkun.com) and [Kars Alfrink](http://leapfrog.nl) for teaching designers of internet of things products to make interactive supervised machine learning part of their prototyping workflow.
+Code and documentation for a workshop developed by [Péter Kun](http://peterkun.com) and [Kars Alfrink](http://leapfrog.nl) to teach designers of internet-of-things products to make interactive supervised machine learning part of their prototyping workflow.
 
 ## Prerequisites
 
