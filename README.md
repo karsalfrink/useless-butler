@@ -115,11 +115,11 @@ Create a new project in Wekinator with the settings below.
 
 ![DTW settings](Screenshots/wekinator-dtw-settings.png?raw=true)
 
-* Two inputs
-* One output
+* Two inputs (one for each photoresistor)
+* One output (for the RGB LED)
 * All DTW
-* Three gesture types
-* Don’t forget to set your MKR1000’s IP under ‘host’
+* Three gesture types (one each for a specific RGB LED state controlled by the Arduino sketch—red, green or off)
+* Don't forget to set your MKR1000's IP under 'host'
 * Leave ports as they are
 
 Hit ‘next’ to start training.
