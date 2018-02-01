@@ -99,6 +99,8 @@ Create a new project in Wekinator with the settings below.
 
 Hit ‘next’ to start training.
 
+#### Wekinator training and running
+
 ### 3. Dynamic Time Warping (DTW)
 
 ## Reports
