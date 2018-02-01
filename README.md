@@ -122,6 +122,8 @@ Create a new project in Wekinator with the settings below.
 
 Hit ‘next’ to start training.
 
+#### Wekinator training and running
+
 ## Reports
 
 * [Write-up of the first attempt at TU Delft IDE Academy](https://leapfrog.nl/blog/archives/2017/03/10/machine-learning-for-designers-workshop/)
