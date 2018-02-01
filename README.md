@@ -60,7 +60,7 @@ Create a new project in Wekinator with the settings below.
 * Don't forget to set your MKR1000's IP under 'host'
 * Leave ports as they are
 
-Hit 'next' to start training
+Hit 'next' to start training.
 
 #### Wekinator training and running
 
