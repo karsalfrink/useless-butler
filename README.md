@@ -90,11 +90,11 @@ Create a new project in Wekinator with the settings below.
 
 ![Classification settings](Screenshots/wekinator-classification-settings.png?raw=true)
 
-* Two inputs
-* One output
+* Two inputs (one for each photoresistor)
+* One output (for the RGB LED)
 * All classifiers
-* Four classes
-* Don’t forget to set your MKR1000’s IP under ‘host’
+* Four classes (one each for a specific RGB LED state controlled by the Arduino sketch—cyan, magenta, yellow and white)
+* Don't forget to set your MKR1000's IP under 'host'
 * Leave ports as they are
 
 Hit ‘next’ to start training.
