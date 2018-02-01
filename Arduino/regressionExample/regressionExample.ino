@@ -77,9 +77,6 @@ void loop() {
   OSCMessage msgOut("/wek/inputs");
   for (int i = 0; i < 2; i++) {
     float input = (float)analogRead(sensorPins[i]);
-//    Serial.print(i);
-//    Serial.print(" = ");
-//    Serial.println(input);
     msgOut.add(input);
   }
 
