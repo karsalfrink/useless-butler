@@ -24,6 +24,14 @@ Using an Arduino MKR1000, build the circuit as included in the `/Fritzing` direc
 
 **Note:** The circuit diagram shows a common anode RGB LED. If using a common cathode RGB LED, connect the long pin to ground instead of 5V.
 
+### Testing the circuit
+
+You can use the `testCircuit` sketch to check if your wiring is all good. 
+
+The sketch will print the readings from the two photoresistors to the Arduino IDE serial monitor. These should be stable in ambient lighting conditions and increase and decrease as lighting intensity changes.
+
+The sketch will also cycle the RGB LED through red, green and blue. If the ordering is different or the colours are off, you need to check your wiring.
+
 ### Using the code
 
 The `/Arduino` directory contains three examples, designed to be used with Wekinator's three output types:
