@@ -51,10 +51,6 @@ void setup() {
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
 
-  analogWrite(redPin, 255);
-  analogWrite(greenPin, 255);
-  analogWrite(bluePin, 255);
-
   // Turn on onboard LED to indicate setup has completed
   pinMode(onboardLed, OUTPUT);
   digitalWrite(onboardLed, HIGH);
