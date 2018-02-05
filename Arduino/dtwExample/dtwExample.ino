@@ -94,7 +94,7 @@ void routeAddress(OSCMessage &msg, int addrOffset) {
 
   if (addr == "/1") setRgbLed(255, 0, 0); // Set RGB LED to red
   if (addr == "/2") setRgbLed(0, 255, 0); // Set RGB LED to green
-  if (addr == "/3") setRgbLed(0, 0, 0);   // Turn RGB LED off
+  if (addr == "/3") setRgbLed(0, 0, 255); // Set RGB LED to blue
 }
 
 void setRgbLed(int r, int g, int b) {

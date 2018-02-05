@@ -130,7 +130,7 @@ Create a new project in Wekinator with the settings below.
 * Two inputs (one for each photoresistor)
 * One output (for the RGB LED)
 * All DTW
-* Three gesture types (one each for a specific RGB LED state controlled by the Arduino sketch—red, green or off)
+* Three gesture types (one each for a specific RGB LED state controlled by the Arduino sketch—red, green or blue)
 * Don't forget to set your MKR1000's IP address under 'Host'
 * Leave ports as they are
 
