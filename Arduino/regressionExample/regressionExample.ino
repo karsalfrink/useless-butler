@@ -94,6 +94,7 @@ void dispatchAddress(OSCMessage &msg) {
       // Multiply float so we can map it to an int
       // http://electronics.stackexchange.com/a/83462
       float m = 3200.0f;
+      val = constrain(val, 0, 1);
       val = val * m;
 
       // Map value to range suitable for analogWrite()
