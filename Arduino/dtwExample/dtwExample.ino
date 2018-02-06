@@ -32,6 +32,8 @@ const int bluePin = 4;
 // Set up onboard LED
 const int onboardLed = 6;
 
+const bool anode = true; // Set this to false if using a common cathode RGB LED
+
 void setup() {
   // Set up wifi
   setupWifi();
@@ -99,7 +101,13 @@ void routeAddress(OSCMessage &msg, int addrOffset) {
 
 void setRgbLed(int r, int g, int b) {
   // For common anode RGB LEDs the input needs to be inverted
-  analogWrite(redPin, 255 - r);
-  analogWrite(greenPin, 255 - g);
-  analogWrite(bluePin, 255 - b);
+  if (anode) {
+    analogWrite(redPin, 255 - r);
+    analogWrite(greenPin, 255 - g);
+    analogWrite(bluePin, 255 - b);
+  } else {
+    analogWrite(redPin, r);
+    analogWrite(greenPin, g);
+    analogWrite(bluePin, b);    
+  }
 }

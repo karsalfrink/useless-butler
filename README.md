@@ -48,6 +48,8 @@ For all examples, go through the steps below to get communication between the MK
 4. Upload the sketch to your MKR1000
 5. Make note of the MKR1000's IP address in the Arduino IDE serial monitor (we will need this when setting up Wekinator)
 
+**Note:** If you're using a common cathode RGB LED in stead of a common anode RGB LED, set the `anode` constant to `false`.
+
 Read on below for the specifics of each example.
 
 ### 1. Regression
