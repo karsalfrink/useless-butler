@@ -22,7 +22,7 @@ Using an Arduino MKR1000, build the circuit as included in the `/Fritzing` direc
 
 ![Circuit](Fritzing/circuit.png?raw=true)
 
-**Note:** The circuit diagram shows a common anode RGB LED. If using a common cathode RGB LED, connect the long pin to ground instead of 5V.
+**Note:** The circuit diagram shows a common anode RGB LED. If using a common cathode RGB LED, connect the long pin to ground instead of 5V (the yellow wire in the circuit diagram).
 
 ### Testing the circuit
 
