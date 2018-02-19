@@ -2,6 +2,12 @@
 
 Code and documentation for a workshop developed by [Péter Kun](http://peterkun.com) and [Kars Alfrink](http://leapfrog.nl) to teach designers of internet-of-things products to make interactive supervised machine learning part of their prototyping workflow.
 
+**Contents**
+
+* [Prerequisites](#prerequisites)
+* [How-To](#how-to)
+* [Reports](#reports)
+
 ## Prerequisites
 
 * Download and install [Wekinator](http://www.wekinator.org/downloads/)
